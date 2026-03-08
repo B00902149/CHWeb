@@ -82,7 +82,7 @@ open index.html
 The waitlist form uses [Formspree](https://formspree.io) to collect signups and email them to you.
 
 1. Sign up at [formspree.io](https://formspree.io)
-2. Create a new form — you'll receive an endpoint like `https://formspree.io/f/xyzabc12`
+2. Create a new form — you'll receive an endpoint like `https://formspree.io/f/mwvrpylz`
 3. Open `js/app.js` and replace line 3:
 
 ```js
@@ -99,7 +99,7 @@ Free tier: **50 submissions/month**. All entries are also visible in your Formsp
 1. Push this folder to a GitHub repo
 2. Go to **Settings → Pages**
 3. Set source to `main` branch, `/ (root)`
-4. Your site will be live at `https://YOUR_USERNAME.github.io/COACHINGHUBWEB`
+4. Your site will be live at `https://b00902149.github.io/CHWeb/`
 
 ### Netlify (drag & drop)
 1. Go to [netlify.com](https://netlify.com)
