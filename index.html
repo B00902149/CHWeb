@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Coaching Hub – Your Complete Fitness Platform</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="cs/styles.css" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav">
+    <div class="nav-logo">
+      <img src="assets/logo.png" alt="Coaching Hub" class="nav-logo-img" />
+    </div>
+    <a href="#waitlist" class="nav-cta">Join Beta</a>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-bg-glow"></div>
+    <div class="hero-content">
+      <img src="assets/mainlogo.png" alt="Coaching Hub" class="hero-mainlogo" />
+      <div class="hero-badge">🚀 Now accepting early testers</div>
+      <h1 class="hero-title">One App.<br>Every Goal.</h1>
+      <p class="hero-sub">Coaching Hub brings your workouts, nutrition, health metrics, and community into a single, powerful platform. No more app-switching. No more excuses.</p>
+      <a href="#waitlist" class="btn-primary">Get Early Access</a>
+    </div>
+    <div class="hero-phones">
+      <div class="mockup-phone mockup-left">
+        <div class="mockup-frame">
+          <img src="assets/MyHealth.png" alt="My Health Screen" />
+        </div>
+      </div>
+      <div class="mockup-phone mockup-center">
+        <div class="mockup-frame">
+          <img src="assets/Dashboard.png" alt="Dashboard Screen" />
+        </div>
+      </div>
+      <div class="mockup-phone mockup-right">
+        <div class="mockup-frame">
+          <img src="assets/Nutrition.png" alt="Nutrition Screen" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROBLEM -->
+  <section class="problem">
+    <div class="container">
+      <h2 class="section-title">Sound familiar?</h2>
+      <div class="pain-grid">
+        <div class="pain-card"><span class="pain-icon">📱</span><p>Juggling 5 different apps just to track one workout session</p></div>
+        <div class="pain-card"><span class="pain-icon">😩</span><p>Losing progress data because it's scattered everywhere</p></div>
+        <div class="pain-card"><span class="pain-icon">🔕</span><p>No accountability — training alone with zero community</p></div>
+        <div class="pain-card"><span class="pain-icon">📊</span><p>Can't see the full picture of your health in one place</p></div>
+      </div>
+      <p class="problem-statement">We built Coaching Hub to fix all of this.</p>
+    </div>
+  </section>
+
+  <!-- FEATURES -->
+  <section class="features" id="features">
+    <div class="container">
+      <h2 class="section-title">Everything you need.<br>Nothing you don't.</h2>
+      <div class="features-grid">
+        <div class="feature-card"><div class="feature-icon-wrap">🏋️</div><h3>Workout Tracking</h3><p>Log sets, reps, and weight. Search thousands of exercises by muscle group. Track your personal bests over time.</p></div>
+        <div class="feature-card"><div class="feature-icon-wrap">🥗</div><h3>Nutrition Logging</h3><p>Search millions of foods via the USDA database. Hit your macros, track calories, and stay on target every day.</p></div>
+        <div class="feature-card"><div class="feature-icon-wrap">❤️</div><h3>Health Metrics</h3><p>Steps, heart rate, sleep, calories — all synced live from your device. Your health data, always up to date.</p></div>
+        <div class="feature-card"><div class="feature-icon-wrap">👥</div><h3>Community Feed</h3><p>Share workouts, post progress photos, and cheer each other on. Accountability built right into the app.</p></div>
+        <div class="feature-card"><div class="feature-icon-wrap">📈</div><h3>Progress Charts</h3><p>Visualise your weight, measurements, and performance over time. See exactly how far you've come.</p></div>
+        <div class="feature-card"><div class="feature-icon-wrap">🔐</div><h3>Secure & Private</h3><p>JWT authentication, login protection, and encrypted data. Your health data stays yours.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- APP DEMO VIDEO -->
+  <section class="demo" id="demo">
+    <div class="container">
+      <h2 class="section-title">Watch it in action.</h2>
+      <p class="demo-sub">See the full Coaching Hub experience — from login to logging your first workout.</p>
+      <div class="video-wrap">
+        <iframe
+          src="https://www.youtube.com/embed/Ksfxh4NRMzQ"
+          title="Coaching Hub App Demo"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen>
+        </iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- APP SCREENS SHOWCASE -->
+  <section class="screens" id="screens">
+    <div class="container">
+      <h2 class="section-title">See it in action.</h2>
+      <p class="screens-sub">Every screen built with you in mind.</p>
+      <div class="screens-showcase">
+        <div class="screens-featured">
+          <div class="featured-phone">
+            <div class="mockup-frame large">
+              <img id="featured-img" src="assets/Dashboard.png" alt="Featured Screen" />
+            </div>
+          </div>
+          <div class="featured-info">
+            <h3 id="featured-title">Dashboard</h3>
+            <p id="featured-desc">Your command centre. See today's summary at a glance — workouts logged, calories hit, and community posts. Navigate to any section in one tap.</p>
+          </div>
+        </div>
+        <div class="screens-thumbs">
+          <div class="thumb active" data-img="assets/Dashboard.png" data-title="Dashboard" data-desc="Your command centre. See today's summary at a glance — workouts logged, calories hit, and community posts. Navigate to any section in one tap.">
+            <img src="assets/Dashboard.png" alt="Dashboard" /><span>Dashboard</span>
+          </div>
+          <div class="thumb" data-img="assets/MyHealth.png" data-title="My Health" data-desc="Live health metrics synced from your device. Weight, sleep, BPM, steps, and calories — all in one place, always up to date.">
+            <img src="assets/MyHealth.png" alt="My Health" /><span>My Health</span>
+          </div>
+          <div class="thumb" data-img="assets/Exercise.png" data-title="Workouts" data-desc="Log every set, rep, and weight. Track progress across each exercise and see your strength grow over time.">
+            <img src="assets/Exercise.png" alt="Workouts" /><span>Workouts</span>
+          </div>
+          <div class="thumb" data-img="assets/Search.png" data-title="Exercise Library" data-desc="Search 50+ exercises by name or muscle group. Filter by category — Strength, Cardio, Stretching, and more.">
+            <img src="assets/Search.png" alt="Exercise Library" /><span>Exercise Library</span>
+          </div>
+          <div class="thumb" data-img="assets/ExerciseDemo.png" data-title="Exercise Detail" data-desc="Full exercise demo with muscle group breakdown, difficulty level, and equipment needed. Know exactly how to perform every movement.">
+            <img src="assets/ExerciseDemo.png" alt="Exercise Detail" /><span>Exercise Detail</span>
+          </div>
+          <div class="thumb" data-img="assets/Nutrition.png" data-title="Nutrition" data-desc="Track calories and macros meal by meal. See exactly how much you've eaten and how much you have left for the day.">
+            <img src="assets/Nutrition.png" alt="Nutrition" /><span>Nutrition</span>
+          </div>
+          <div class="thumb" data-img="assets/Macros.png" data-title="Weekly Macros" data-desc="View your weekly nutrition breakdown — protein, carbs, and fat — with visual progress bars and daily calorie history.">
+            <img src="assets/Macros.png" alt="Weekly Macros" /><span>Weekly Macros</span>
+          </div>
+          <div class="thumb" data-img="assets/Community.png" data-title="Community" data-desc="Share victories, help requests, testimonies, and encouragement with a community that keeps you accountable.">
+            <img src="assets/Community.png" alt="Community" /><span>Community</span>
+          </div>
+          <div class="thumb" data-img="assets/AddPost.png" data-title="Share a Post" data-desc="Post to the community with category tags — Help Request, Testimony, Encouragement, or Victory. Stay connected.">
+            <img src="assets/AddPost.png" alt="Share a Post" /><span>Share a Post</span>
+          </div>
+          <div class="thumb" data-img="assets/Profile.png" data-title="Profile" data-desc="Your full stats at a glance — workout streak, total workouts, posts, and days logged. Track your consistency.">
+            <img src="assets/Profile.png" alt="Profile" /><span>Profile</span>
+          </div>
+          <div class="thumb" data-img="assets/Signup.png" data-title="Sign Up" data-desc="Get started in seconds. Create your account and join the Coaching Hub community with a clean, simple onboarding flow.">
+            <img src="assets/Signup.png" alt="Sign Up" /><span>Sign Up</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section class="how">
+    <div class="container">
+      <h2 class="section-title">How it works</h2>
+      <div class="steps">
+        <div class="step"><div class="step-num">01</div><h3>Create your profile</h3><p>Sign up, set your goals, and personalise your experience in minutes.</p></div>
+        <div class="step-arrow">→</div>
+        <div class="step"><div class="step-num">02</div><h3>Log everything</h3><p>Track workouts, food, and health data all from one dashboard.</p></div>
+        <div class="step-arrow">→</div>
+        <div class="step"><div class="step-num">03</div><h3>See results</h3><p>Watch your progress charts grow. Stay motivated. Hit your goals.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WAITLIST -->
+  <section class="waitlist" id="waitlist">
+    <div class="container">
+      <div class="waitlist-card">
+        <div class="waitlist-glow"></div>
+        <h2 class="waitlist-title">Be the first to try it.</h2>
+        <p class="waitlist-sub">We're opening up early access to a small group of testers. Get in now and help shape the app before public launch.</p>
+        <div class="form-wrap">
+          <input type="text" id="name" placeholder="Your name" class="form-input" />
+          <input type="email" id="email" placeholder="Your email address" class="form-input" />
+          <button class="btn-primary" onclick="handleSignup()">Join the Waitlist</button>
+        </div>
+        <p class="form-note">No spam. No credit card. Just early access.</p>
+        <div id="success-msg" class="success-msg hidden">✅ You're on the list! We'll be in touch soon.</div>
+        <div id="error-msg" class="error-msg hidden">❌ Something went wrong. Please try again.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-logo">
+      <img src="assets/mainlogo.png" alt="Coaching Hub" class="footer-logo-img" />
+    </div>
+    <p class="footer-copy">© 2025 Coaching Hub. Built by Adrian Dallas · Ulster University.</p>
+  </footer>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
