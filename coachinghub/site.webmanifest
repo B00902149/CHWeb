@@ -1,0 +1,21 @@
+{
+  "name": "CoachingHub",
+  "short_name": "CH",
+  "icons": [
+    {
+      "src": "/coachinghub/web-app-manifest-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "/coachinghub/web-app-manifest-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "theme_color": "#ffffff",
+  "background_color": "#002142",
+  "display": "standalone"
+}
