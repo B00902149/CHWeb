@@ -1,6 +1,6 @@
 /* ===== LOGO IMAGES ===== */
 .nav-logo-img {
-  height: 30px;
+  height: 38px;
   width: auto;
   object-fit: contain;
 }
@@ -547,24 +547,78 @@ body {
 
 /* ===== RESPONSIVE ===== */
 @media (max-width: 900px) {
+
+  /* Hero — stack vertically, content first, phones below */
   .hero {
     flex-direction: column;
     text-align: center;
-    padding: 110px 24px 60px;
+    align-items: center;
+    padding: 100px 20px 60px;
+    gap: 40px;
+  }
+  .hero-content {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  /* Fix logo overflow on mobile */
+  .hero-mainlogo {
+    height: auto;
+    width: 80%;
+    max-width: 280px;
+    margin: 0 auto 20px;
+  }
+
+  /* Hide side phones on mobile — just show centre */
+  .mockup-left,
+  .mockup-right {
+    display: none;
   }
   .hero-phones {
-    height: 340px;
+    height: auto;
     width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
   }
-  .mockup-left { transform: rotate(-8deg) translateX(-90px) translateY(10px); }
-  .mockup-right { transform: rotate(8deg) translateX(90px) translateY(10px); }
-  .mockup-phone .mockup-frame { width: 150px; height: 310px; }
-  .mockup-center .mockup-frame { width: 170px; height: 350px; }
+  .mockup-center {
+    position: relative;
+    transform: none;
+  }
+  .mockup-center .mockup-frame {
+    width: 200px;
+    height: 420px;
+  }
+
+  /* Screens showcase */
   .screens-featured { flex-direction: column; gap: 32px; }
-  .featured-phone .mockup-frame { width: 220px; height: 460px; }
+  .featured-phone .mockup-frame { width: 200px; height: 420px; }
+
+  /* Steps */
   .steps { flex-direction: column; align-items: center; }
   .step-arrow { transform: rotate(90deg); padding: 0; }
+
+  /* Footer */
   .footer { flex-direction: column; text-align: center; padding: 32px 24px; }
-  .waitlist-card { padding: 40px 24px; }
+
+  /* Waitlist */
+  .waitlist-card { padding: 40px 20px; }
+
+  /* Nav */
   .nav { padding: 14px 20px; }
+
+  /* Pain grid */
+  .pain-grid { grid-template-columns: 1fr 1fr; }
+
+  /* Features */
+  .features-grid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 480px) {
+  .hero { padding: 90px 16px 48px; }
+  .hero-title { font-size: 3.5rem; }
+  .section-title { font-size: 2rem; }
+  .pain-grid { grid-template-columns: 1fr; }
+  .hero-mainlogo { width: 70%; max-width: 220px; }
+  .mockup-center .mockup-frame { width: 170px; height: 360px; }
 }
