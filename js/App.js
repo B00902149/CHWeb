@@ -57,7 +57,9 @@ async function handleSignup() {
 
 // ===== SCREEN SHOWCASE THUMBNAILS =====
 document.querySelectorAll('.thumb').forEach(thumb => {
-  thumb.addEventListener('click', () => {
+  function handleThumbSelect(e) {
+    e.preventDefault();
+
     document.querySelectorAll('.thumb').forEach(t => t.classList.remove('active'));
     thumb.classList.add('active');
 
@@ -79,7 +81,10 @@ document.querySelectorAll('.thumb').forEach(thumb => {
 
     // Scroll thumb into view
     thumb.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
-  });
+  }
+
+  thumb.addEventListener('click', handleThumbSelect);
+  thumb.addEventListener('touchend', handleThumbSelect);
 });
 
 
