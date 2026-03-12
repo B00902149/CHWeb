@@ -57,35 +57,49 @@ async function handleSignup() {
 
 // ===== SCREEN SHOWCASE THUMBNAILS =====
 document.querySelectorAll('.thumb').forEach(thumb => {
-  function handleThumbSelect(e) {
-    e.preventDefault();
+  let touchMoved = false;
 
-    document.querySelectorAll('.thumb').forEach(t => t.classList.remove('active'));
-    thumb.classList.add('active');
+  thumb.addEventListener('touchstart', () => {
+    touchMoved = false;
+  }, { passive: true });
 
-    const img   = thumb.dataset.img;
-    const title = thumb.dataset.title;
-    const desc  = thumb.dataset.desc;
+  thumb.addEventListener('touchmove', () => {
+    touchMoved = true;
+  }, { passive: true });
 
-    const featuredImg   = document.getElementById('featured-img');
-    const featuredTitle = document.getElementById('featured-title');
-    const featuredDesc  = document.getElementById('featured-desc');
+  thumb.addEventListener('touchend', () => {
+    if (!touchMoved) {
+      activateThumb(thumb);
+    }
+  }, { passive: true });
 
-    featuredImg.style.opacity = '0';
-    setTimeout(() => {
-      featuredImg.src = img;
-      featuredImg.style.opacity = '1';
-    }, 150);
-    featuredTitle.textContent = title;
-    featuredDesc.textContent  = desc;
-
-    // Scroll thumb into view
-    thumb.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
-  }
-
-  thumb.addEventListener('click', handleThumbSelect);
-  thumb.addEventListener('touchend', handleThumbSelect);
+  thumb.addEventListener('click', () => {
+    activateThumb(thumb);
+  });
 });
+
+function activateThumb(thumb) {
+  document.querySelectorAll('.thumb').forEach(t => t.classList.remove('active'));
+  thumb.classList.add('active');
+
+  const img   = thumb.dataset.img;
+  const title = thumb.dataset.title;
+  const desc  = thumb.dataset.desc;
+
+  const featuredImg   = document.getElementById('featured-img');
+  const featuredTitle = document.getElementById('featured-title');
+  const featuredDesc  = document.getElementById('featured-desc');
+
+  featuredImg.style.opacity = '0';
+  setTimeout(() => {
+    featuredImg.src = img;
+    featuredImg.style.opacity = '1';
+  }, 150);
+  featuredTitle.textContent = title;
+  featuredDesc.textContent  = desc;
+
+  thumb.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+}
 
 
 const observer = new IntersectionObserver((entries) => {
