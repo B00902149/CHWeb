@@ -90,15 +90,15 @@ function activateThumb(thumb) {
   const featuredTitle = document.getElementById('featured-title');
   const featuredDesc  = document.getElementById('featured-desc');
 
-  featuredImg.style.opacity = '0';
-  setTimeout(() => {
-    featuredImg.src = img;
-    featuredImg.style.opacity = '1';
-  }, 150);
+  featuredImg.src = img;
+  featuredImg.style.opacity = '1';
   featuredTitle.textContent = title;
   featuredDesc.textContent  = desc;
 
   thumb.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+  console.log('Setting src to:', thumb.dataset.img);
+  console.log('Featured img element:', document.getElementById('featured-img'));
+
 }
 
 
