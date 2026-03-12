@@ -13,7 +13,6 @@ async function handleSignup() {
   const name  = nameEl.value.trim();
   const email = emailEl.value.trim();
 
-  // Basic validation
   if (!name) {
     nameEl.focus();
     nameEl.style.borderColor = '#ef4444';
@@ -27,7 +26,6 @@ async function handleSignup() {
     return;
   }
 
-  // Loading state
   btn.textContent = 'Sending...';
   btn.disabled = true;
   errorMsg.classList.add('hidden');
@@ -95,13 +93,16 @@ function activateThumb(thumb) {
   featuredTitle.textContent = title;
   featuredDesc.textContent  = desc;
 
+  // Scroll thumb into view horizontally
   thumb.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
-  console.log('Setting src to:', thumb.dataset.img);
-  console.log('Featured img element:', document.getElementById('featured-img'));
 
+  // On mobile the featured mockup is above the thumbs — scroll it into view so user sees the change
+  if (window.innerWidth < 900) {
+    document.querySelector('.screens-featured').scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
 }
 
-
+// ===== INTERSECTION OBSERVER =====
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
@@ -121,11 +122,9 @@ document.querySelectorAll('.feature-card, .pain-card, .step').forEach(el => {
 // ===== NAV SHADOW ON SCROLL =====
 window.addEventListener('scroll', () => {
   const nav = document.querySelector('.nav');
-  if (window.scrollY > 40) {
-    nav.style.boxShadow = '0 4px 30px rgba(0,0,0,0.5)';
-  } else {
-    nav.style.boxShadow = 'none';
-  }
+  nav.style.boxShadow = window.scrollY > 40
+    ? '0 4px 30px rgba(0,0,0,0.5)'
+    : 'none';
 });
 
 // ===== ENTER KEY ON FORM =====
