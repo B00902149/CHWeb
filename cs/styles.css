@@ -317,6 +317,8 @@ body {
   align-items: center;
   gap: 8px;
   cursor: pointer;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
   transition: transform 0.2s;
 }
 .thumb:hover { transform: translateY(-4px); }
@@ -328,6 +330,7 @@ body {
   border-radius: 14px;
   border: 2px solid var(--border);
   transition: border-color 0.2s, box-shadow 0.2s;
+  pointer-events: none;
 }
 .thumb span {
   font-size: 0.7rem;
@@ -335,6 +338,7 @@ body {
   text-align: center;
   line-height: 1.3;
   transition: color 0.2s;
+  pointer-events: none;
 }
 .thumb.active img {
   border-color: var(--accent);
