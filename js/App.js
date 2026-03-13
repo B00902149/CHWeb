@@ -55,18 +55,8 @@ async function handleSignup() {
 
 // ===== SCREEN SHOWCASE THUMBNAILS =====
 document.querySelectorAll('.thumb').forEach(thumb => {
-  let touchMoved = false;
-
-  thumb.addEventListener('touchstart', () => {
-    touchMoved = false;
-  }, { passive: true });
-
-  thumb.addEventListener('touchmove', () => {
-    touchMoved = true;
-  }, { passive: true });
-
   thumb.addEventListener('touchend', () => {
-    if (!touchMoved) activateThumb(thumb);
+    activateThumb(thumb);
   }, { passive: true });
 
   thumb.addEventListener('click', () => {
