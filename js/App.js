@@ -1,6 +1,6 @@
 // ===== FORMSPREE ENDPOINT =====
 // Replace this with your own from formspree.io/f/xxxxxxxx
-const FORMSPREE_URL = 'https://formspree.io/f/YOUR_FORM_ID';
+const FORMSPREE_URL = 'https://formspree.io/f/mwvrpylz';
 
 // ===== WAITLIST SIGNUP =====
 async function handleSignup() {
@@ -66,9 +66,7 @@ document.querySelectorAll('.thumb').forEach(thumb => {
   }, { passive: true });
 
   thumb.addEventListener('touchend', () => {
-    if (!touchMoved) {
-      activateThumb(thumb);
-    }
+    if (!touchMoved) activateThumb(thumb);
   }, { passive: true });
 
   thumb.addEventListener('click', () => {
@@ -80,26 +78,16 @@ function activateThumb(thumb) {
   document.querySelectorAll('.thumb').forEach(t => t.classList.remove('active'));
   thumb.classList.add('active');
 
-  const img   = thumb.dataset.img;
-  const title = thumb.dataset.title;
-  const desc  = thumb.dataset.desc;
-
   const featuredImg   = document.getElementById('featured-img');
   const featuredTitle = document.getElementById('featured-title');
   const featuredDesc  = document.getElementById('featured-desc');
 
-  featuredImg.src = img;
+  featuredImg.src = thumb.dataset.img;
   featuredImg.style.opacity = '1';
-  featuredTitle.textContent = title;
-  featuredDesc.textContent  = desc;
+  featuredTitle.textContent = thumb.dataset.title;
+  featuredDesc.textContent  = thumb.dataset.desc;
 
-  // Scroll thumb into view horizontally
   thumb.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
-
-  // On mobile the featured mockup is above the thumbs — scroll it into view so user sees the change
-  if (window.innerWidth < 900) {
-    document.querySelector('.screens-featured').scrollIntoView({ behavior: 'smooth', block: 'start' });
-  }
 }
 
 // ===== INTERSECTION OBSERVER =====
