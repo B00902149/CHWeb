@@ -230,7 +230,7 @@ body {
 }
 .video-wrap {
   max-width: 315px;
-  max-height: 640px;
+  max-height: 560px;
   margin: 0 auto;
   border-radius: 20px;
   overflow: hidden;
